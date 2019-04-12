@@ -1,0 +1,60 @@
+﻿@using Kursach_v3.Models
+@model Kursach_v3.Models.Text
+@{
+    /**/
+
+    ViewBag.Title = "Home page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ if (Model.ReadableText != null)
+        {
+            <h3>Ваш текст после сдвига!</h3>
+            foreach (string dataItem in @Model.ReadableText)
+            {
+                <div> @dataItem </div>
+            }
+            <br />
+            <div>Хотите скачать файл?</div><br />
+            @Html.ActionLink("Скачать .txt файлик", "Download", "Home", null, new { @class = "page-scroll" });
+            <br />
+            @Html.ActionLink("Скачать .docx файлик", "DownloadDocx", "Home", null, new { @class = "page-scroll" });
+
+        }
+    }
+<br />
+
+@using (Html.BeginForm("Index",
+                                "Home",
+                                FormMethod.Post,
+                                new { enctype = "multipart/form-data" }))
+
+{
+
+    <h4>Сюда вводим текст для шифровки/дешифровки</h4>
+    @Html.EditorFor(m => m.InputText, new { htmlAttributes = new { style = "width: 500px; height: 150px" }, })<br />
+    
+    <label for="Shift"> Выберите сдвиг. С помощью него можно как зашифровать файл так и его дешифровать. Значение по умолчанию - 0. Сдвиг может быть отрицательным.</label><br />
+    <input type="number" max="32" min="-32" name="Shift" id="Shift" /><br />
+    <input type="submit" value="Обработать введенный текст!" /><br />
+
+}
+<br />
+@using (Html.BeginForm("Index",
+                                "Home",
+                                FormMethod.Post,
+                                new { enctype = "multipart/form-data" }))
+{
+
+    {
+        <h4>Сюда загружаем .txt и .docx файлы</h4>
+        <label for="Shift"> Выберите сдвиг.</label><br />
+        <input type="number" max="32" min="-32" name="Shift" id="Shift" /><br />
+        <input type="file" name="file" id="file" />
+        <input type="submit" value="Обработать файл!!" />
+        <br><br>
+        @ViewBag.Message
+        <br />
+        @ViewBag.Message1
+
+    }
+}

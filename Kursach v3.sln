@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kursach v3", "Kursach v3\Kursach v3.csproj", "{3B767858-B42A-4336-99DC-AE7445C7F37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kursach v3.UnitTests", "Kursach v3.Tests\Kursach v3.UnitTests.csproj", "{ACEEA810-3CDF-4182-A327-5CD0641150D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B767858-B42A-4336-99DC-AE7445C7F37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B767858-B42A-4336-99DC-AE7445C7F37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B767858-B42A-4336-99DC-AE7445C7F37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B767858-B42A-4336-99DC-AE7445C7F37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACEEA810-3CDF-4182-A327-5CD0641150D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEEA810-3CDF-4182-A327-5CD0641150D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEEA810-3CDF-4182-A327-5CD0641150D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACEEA810-3CDF-4182-A327-5CD0641150D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B75CAEE2-DB57-4CBF-9185-77324B2F3B77}
+	EndGlobalSection
+EndGlobal
